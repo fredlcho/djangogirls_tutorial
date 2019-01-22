@@ -1,8 +1,11 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     {%if title%}
     <title>{{title}} - Fred's Blog</title>
     {%else%}
@@ -10,7 +13,10 @@
     {%endif%}
   </head>
   <body>
-    <h1>Welcome to my mind.</h1>
+    <div class="page-header">
+    <h1> <a href="">Welcome to my mind</a></h1>
+    <p>I post about my daily thoughts here </p>
+    </div>
     {%block content%}
     {%endblock%}
   </body>

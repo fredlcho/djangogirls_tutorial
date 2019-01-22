@@ -1,9 +1,12 @@
 {%extends 'blog/base.html'%}
 
+
 {%block content%}
 {%for x in post%}
-<h2>{{x.title}}</h2>
+<div class = "post">
+<h2><a href= "">{{x.title}}</a></h2>
 <p>Published - {{x.published_date}}</p>
 <p>{{x.text|linebreaksbr}}</p>
+</div>
 {%endfor%}
 {%endblock%}
