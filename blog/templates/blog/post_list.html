@@ -5,7 +5,7 @@
 {%for x in post%}
 <div class = "post">
 <h2><a href= "">{{x.title}}</a></h2>
-<p>Published - {{x.published_date}}</p>
+<p><b>{{x.published_date}}</b></p>
 <p>{{x.text|linebreaksbr}}</p>
 </div>
 {%endfor%}
