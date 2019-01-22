@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    {%if title%}
-    <title>{{title}} - Fred's Blog</title>
-    {%else%}
-    <title>Fred's Blog</title>
-    {%endif%}
-  </head>
-  <body>
-    
-  </body>
-</html>
+{%extends 'blog/base.html'%}
+
+{%block content%}
+{%for x in post%}
+<h2>{{x.title}}</h2>
+<p>Published - {{x.published_date}}</p>
+<p>{{x.text|linebreaksbr}}</p>
+{%endfor%}
+{%endblock%}
